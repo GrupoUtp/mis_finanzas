@@ -4,7 +4,7 @@
   session_start();
 //Validación de session
   if (isset($_SESSION['user_id'])) {
-    header('Location: /mis_finanzas');
+    header('Location: /mis_finanzas/home.php');
   }
   require 'conection.php';
 //Query para inicio de sesión, compara el correo y contraseña con los datos ingresados en la tabla usuarios (user).
@@ -19,7 +19,7 @@
     if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
       $_SESSION['user_id'] = $results['id'];
       header("Location: /mis_finanzas/home.php");
-    } else {
+    }else {
       $message = 'Error, datos ingresados incorrectamente';
     }
   }
@@ -27,18 +27,16 @@
 <!-- FIN CODIGO PHP-->
 
 <!-- PAGINA LOGIN-->
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Login</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="Css/home.css" type="text/css">
-    <link rel="stylesheet" href="Css/styleInputs.css" type="text/css">
+    <title>Login Form Design One | Fazt</title>
+    <link rel="stylesheet" href="Css/styleLogin.css">
+    <link rel="stylesheet" href="Css/Home.css">
+    <link rel="stylesheet" href="Css/layouts/header.css" type="text/css">
   </head>
-<body>
+  <body>
 
 <!--Barra de navegación.-->
   <nav class="navBar">
@@ -50,24 +48,28 @@
         <li><a href="#">Contact</a></li>
       </ul>
   </nav>
-<!--Contenido pagina-->
-  <div class="contentLogin">
-    <!--INICIO CODIGO PHP, Mensaje de login exitoso/fallido-->
-     <?php if(!empty($message)): ?>
-      <p> <?= $message ?></p>
-     <?php endif; ?>
-     <!--FIN CODIGO PHP-->
-    <h1>Login</h1>
-    <span>or <a href="index.php#modal">SignUp</a></span>
-
-<!-- FORMULARIO DE LOGIN-->
-    <form action="login.php" method="post">
-        <input type="email" id="email" name="email" placeholder="Gmail">
-        <input type="password" name="password" placeholder="Contraseña">
-        <input type="submit" value="Send">
-    </form>
-  </div>
-
-
-</body>
+    <div class="login-box">
+      <img src="Images/Prueba.PNG" class="avatar" alt="Avatar Image"> <!--Imagen Logo-->
+      <h1>Login Here</h1>
+        <!--INICIO CODIGO PHP, Mensaje de login exitoso/fallido-->
+       <?php if(!empty($message)): ?>
+       <p> <?= $message ?></p>
+        <?php endif; ?>
+        <br>
+        <form action="login.php" method="post">
+        <!-- Usuario -->
+        <label for="username">Email</label>
+        <input type="email" name="email" placeholder="Enter email"><!--Escribe en input la acción-->
+        <!-- Constraseña -->
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Enter Password">
+        <!-- Boton Log In -->
+        <input type="submit" value="Log In"><!--Activa el formulario al hacerle click-->
+        <!-- Link a interfaz: cambiar contraseña -->
+        <a href="#">Lost your Password?</a><br>
+        <!-- Link a interfaz: crear usuario -->
+        <a href="#">Don't have An account?</a>
+      </form>
+    </div>
+  </body>
 </html>

@@ -41,6 +41,7 @@
    <link rel="stylesheet" href="Css/Home.css"  type="text/css"> 
    <link rel="stylesheet" href="Css/Popup.css" type="text/css">
    <link rel="stylesheet" href="Css/styleInputs.css" type="text/css">
+   <link rel="stylesheet" href="Css/layouts/header.css" type="text/css">
    <title>MY FINANCE$</title>
  </head>
 <body>
@@ -49,7 +50,6 @@
     <nav class="navBar">
         <a href="#" class="nav-logo">MY FINANCE$</a>
         <ul>
-            <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="login.php">Login</a></li>

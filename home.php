@@ -29,6 +29,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="Css/Home.css" type="text/css">
+    <link rel="stylesheet" href="Css/layouts/header.css" type="text/css">
     <link rel="stylesheet" href="Css/styleInputs.css" type="text/css">
   </head>
 <body>
@@ -37,7 +38,7 @@
  <nav class="navBar">
     <a href="#" class="nav-logo">MY FINANCE$</a>
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a id="log" href="logout.php">Cerrar sesión</a></li>

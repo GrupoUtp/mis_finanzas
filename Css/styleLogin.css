@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: url(../img/bg2.jpg) no-repeat center top; /*Imagen de fondo*/
+    background: url(../Images/bg2.jpg) no-repeat center top; /*Imagen de fondo*/
     background-size: cover;
     font-family: sans-serif;
     height: 100vh;

@@ -1,4 +1,11 @@
 /*CABECERA DE LAS PAGINAS*/
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+ 
 .navBar{
     background-color: #13121e;
     color: #d8d8d8;

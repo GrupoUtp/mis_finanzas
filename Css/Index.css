@@ -1,6 +1,4 @@
-/*DISEÑO DEL LADING Y BARRA DE NAVEGACION DE LAS OTRAS PAGINAS*/
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:300,400,500,600,700,800,900&display=swap');
+/*DISEÑO DEL LADING*/
 
 *{
    font-family: 'Poppins', sans-serif;
@@ -51,4 +49,8 @@ img{
     margin-left: 175px;
     max-width: 600px;
     margin-right: 20px;
+}
+
+#btnlogin:hover{
+    background: limegreen;
 }

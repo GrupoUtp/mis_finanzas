@@ -4,7 +4,7 @@
   session_start();
 //Validación de session
   if (isset($_SESSION['user_id'])) {
-    header('Location: /mis_finanzas/home.php');
+    header('Location: /mis_finanzas');
   }
   require 'conection.php';
 //Query para inicio de sesión, compara el correo y contraseña con los datos ingresados en la tabla usuarios (user).
@@ -19,7 +19,7 @@
     if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
       $_SESSION['user_id'] = $results['id'];
       header("Location: /mis_finanzas/home.php");
-    }else {
+    } else {
       $message = 'Error, datos ingresados incorrectamente';
     }
   }
@@ -31,22 +31,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Login Form Design One | Fazt</title>
-    <link rel="stylesheet" href="Css/styleLogin.css">
-    <link rel="stylesheet" href="Css/Home.css">
-    <link rel="stylesheet" href="Css/layouts/header.css" type="text/css">
+   <link rel="stylesheet" href="Css/layouts/header.css" type="text/css">
+   <link rel="stylesheet" href="Css/styleLogin.css">
+    <title>MY FINANCE$ Login</title>
   </head>
   <body>
 
 <!--Barra de navegación.-->
   <nav class="navBar">
-   <a href="#" class="nav-logo">MY FINANCE$</a>
-      <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+        <a href="#" class="nav-logo">MY FINANCE$</a>
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
   </nav>
     <div class="login-box">
       <img src="Images/Prueba.PNG" class="avatar" alt="Avatar Image"> <!--Imagen Logo-->

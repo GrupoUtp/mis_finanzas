@@ -38,7 +38,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="Css/Home.css"  type="text/css"> 
+   <link rel="stylesheet" href="Css/index.css"  type="text/css"> 
    <link rel="stylesheet" href="Css/Popup.css" type="text/css">
    <link rel="stylesheet" href="Css/styleInputs.css" type="text/css">
    <link rel="stylesheet" href="Css/layouts/header.css" type="text/css">
@@ -52,7 +52,7 @@
         <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
-            <li><a href="login.php">Login</a></li>
+            <li><a id="btnlogin" href="login.php">Login</a></li>
         </ul>
     </nav>
 <!--Contenido de la pagina lading-->
@@ -60,7 +60,7 @@
         <div class="content">
             <h1>Lorem ipsum</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sequi nisi placeat accusamus harum necessitatibus libero aliquam voluptatem impedit, incidunt, eum alias distinctio reprehenderit sed. Perspiciatis ex dicta distinctio assumenda?</p>
-            <a href="#modal" class="btns">Get Started</a>
+            <a href="#modal" class="btns">Registrate</a>
             <a href="" class="btns">Learn More</a>
         </div>
         <div class="imglobby">

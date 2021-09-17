@@ -1,7 +1,7 @@
 <!-- INICIO CODIGO DE PHP-->
 <?php
 //Realizar conexión a base de datos.
- require 'conection.php';
+ require 'Config/conection.php';
 //Variable iniciada de mensaje emergente.
  $message = ''; 
 
@@ -39,8 +39,8 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="Css/index.css"  type="text/css"> 
-   <link rel="stylesheet" href="Css/Popup.css" type="text/css">
-   <link rel="stylesheet" href="Css/styleInputs.css" type="text/css">
+   <link rel="stylesheet" href="Css/layouts/Popup.css" type="text/css">
+   <link rel="stylesheet" href="Css/layouts/styleInputs.css" type="text/css">
    <link rel="stylesheet" href="Css/layouts/header.css" type="text/css">
    <title>MY FINANCE$</title>
  </head>
@@ -52,7 +52,7 @@
         <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
-            <li><a id="btnlogin" href="login.php">Login</a></li>
+            <li><a id="btnlogin" href="/mis_finanzas/Pages/login.php">Login</a></li>
         </ul>
     </nav>
 <!--Contenido de la pagina lading-->

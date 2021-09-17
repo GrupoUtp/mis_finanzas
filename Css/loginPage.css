@@ -11,7 +11,7 @@ body {
   
 .login-box {
     width: 320px;
-    height: 420px;
+    height: 450px;
     background: #000;
     color: #fff;
     top: 25%;
@@ -72,8 +72,8 @@ body {
 
 .login-box input[type="submit"]:hover {
     cursor: pointer;
-    background: #ffc107;
-    color: #000;
+    background: #00a000;
+    color: #fff;
 }
 
 .login-box a {

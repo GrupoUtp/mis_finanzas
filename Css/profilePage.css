@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#btnlogout{
+    background: #a11000;
+}
+
+#btnlogout:hover{
+    background: red;
+    color: #fff;
+}
+
+.content{
+    margin: 0px 150px;
+    padding: 20px;
+    top: 100px;
+    position: absolute;
+}

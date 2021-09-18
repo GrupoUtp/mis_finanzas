@@ -1,16 +1,16 @@
 body {
     margin: 0;
     padding: 0;
-    background: url(../Images/bg2.jpeg) no-repeat center top;
+    background: url(../Images/bg3.jpg) no-repeat center top;
     background-size: cover;
-    font-family: sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     height: 100vh;
   }
   
   .login-box {
     width: 320px;
-    height: 420px;
-    background: #000;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.5 );
     color: #fff;
     top: 50%;
     left: 50%;
@@ -33,13 +33,12 @@ body {
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
-    font-size: 22px;
+    font-size: 24px;
   }
   
   .login-box label {
     margin: 0;
     padding: 0;
-    font-weight: bold;
     display: block;
   }
   
@@ -54,15 +53,15 @@ body {
     background: transparent;
     outline: none;
     height: 40px;
-    color: #fff;
-    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
   }
   
   .login-box input[type="submit"] {
     border: none;
     outline: none;
     height: 40px;
-    background: #b80f22;
+    background: rgb(185, 15, 35);
     color: #fff;
     font-size: 18px;
     border-radius: 20px;
@@ -70,8 +69,8 @@ body {
   
   .login-box input[type="submit"]:hover {
     cursor: pointer;
-    background: #ffc107;
-    color: #000;
+    background: rgba(185, 15, 35, 0.5 );
+    color: rgb(255, 255, 255);
   }
   
   .login-box a {

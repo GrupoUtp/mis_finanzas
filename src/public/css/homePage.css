@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#btnlogout{
+    background: #a11000;
+}
+
+#btnlogout:hover{
+    background: red;
+    color: #fff;
+}
+

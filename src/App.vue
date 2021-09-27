@@ -2,22 +2,22 @@
 
     <div>
       <Login></Login>
-      <NewUser></NewUser>
+      <!-- <NewUser></NewUser> -->
     </div>
    
     
 </template>
 
 <script>
-import Login from './components/Login.vue'
-import NewUser from './components/NewUser.vue'
+import Login from '@/components/Login.vue'
+// import NewUser from '@/components/NewUser.vue'
 
 
 export default {
   name: 'App',
   components: {
-    Login,
-    NewUser
+    Login
+    // NewUser
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
     <div class="newUser-box">
-        <img src="../assets/logo_avatar2.PNG" class="avatar" alt="Avatar Image">
+        <img src="../assets/bg3.jpg" class="avatar" alt="Avatar Image">
         <h1>Welcome to myFinances</h1>
         <form>
           <!-- NAME INPUT -->

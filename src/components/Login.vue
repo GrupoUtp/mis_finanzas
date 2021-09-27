@@ -1,6 +1,6 @@
 <template>
   <div class="login-box">
-      <img src="/assets/logo_avatar2.PNG" class="avatar" alt="Avatar Image">
+      <img src="../assets/logo_avatar2.jpg" class="avatar" alt="Avatar Image">
       <h1>Welcome back</h1>
       <form>
         <!-- USERNAME INPUT -->

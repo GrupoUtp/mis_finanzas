@@ -2,8 +2,9 @@
     <div>
         <app-header></app-header>
         <div class="d-flex justify-content-center mt-5">
-            <h1>Error 404 Not found</h1>
+            <h1>organizar interfaz para ver consolidado monetario</h1>
         </div>
+        
     </div>
 </template>
 
@@ -15,3 +16,7 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+  
+</style>

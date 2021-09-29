@@ -3,16 +3,45 @@
         <app-header></app-header>
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container" data-aos="zoom-out" data-aos-delay="100">
-      <h1>Organiza tu presente <span>visualiza tu futuro</span></h1>
-      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quis adipisci nostrum quae nemo! Modi voluptatum voluptas minus. Labore facere dolorem ad architecto libero. Omnis quis voluptatem nobis dignissimos possimus.</h2>
-      <div class="d-flex">
-        <!-- <a href="#about" class="btn-get-started scrollto">Get Started</a> -->
-        <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
+ <section id="hero" class="about section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <!-- <h2>About</h2> -->
+          <h1>Organiza tu presente <span>visualiza tu futuro</span></h1>
+          <!-- <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p> -->
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <img src="@/assets/img/carrusel/ahorro1.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <h3>Una billetera organizada</h3>
+            <p class="fst-italic">
+              Te ayudamos a llevar un registro de tus movimientos de dinero, si sabes en que utilizas tu dinero te daras cuenta si es un gasto o una inversión
+            </p>
+            <ul>
+              <li>
+                <i class="bx bx-lock-open"></i>
+                <div>
+                  <h5>Desbloquea tu mente</h5>
+                  <p>Utiliza al máximo tú potencial ingeniatelas para no depender solo de tú trabajo, crea negocio</p>
+                </div>
+              </li>
+              <li>
+                <i class="bx bx-joystick"></i>
+                <div>
+                  <h5>Controla tus finanzas</h5>
+                  <p>Ahorra e invierte de forma eficiente tu capital, que den frutos que poco a poco llenan tu alcancia</p>
+                </div>
+              </li>
+            </ul>            
+          </div>
+        </div>
+
       </div>
-    </div>
-  </section><!-- End Hero -->
+    </section><!-- End About Section -->
 
   <main id="main">
 

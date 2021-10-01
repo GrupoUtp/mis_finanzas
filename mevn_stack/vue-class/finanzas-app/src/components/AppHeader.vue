@@ -24,7 +24,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="./home">Home</a></li>
+          <li><a class="nav-link scrollto active" href="./">Home</a></li>
           <li><a class="nav-link scrollto" href="./ingresos">Ingresos</a></li>
           <li><a class="nav-link scrollto" href="./egresos">Egresos</a></li>
           <li><a class="nav-link scrollto " href="./consolidado">Consolidado</a></li>

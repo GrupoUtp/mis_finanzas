@@ -9,9 +9,9 @@
         <!-- PASSWORD INPUT -->
         <label for="password">Password</label>
         <input type="password" placeholder="Enter Password">
-        <input type="submit" value="Log In">
-        <a href="#">Forgot password?</a><br>
-        <a href="#">Don't have an account yet?</a>
+        <input type="submit" @click="irAHome()" value="Log In">
+        <a href="">Forgot password?</a><br>
+        <a href="" @click="CreteAccount()">Don't have an account yet?</a>
       </form>
     </div>
 </template>
@@ -21,8 +21,16 @@ export default {
   name: 'Login',
   props: {
     
+  },
+  methods:{
+    irAHome(){
+      this.$router.push('/Home');
+     },
+    CreteAccount(){
+      this.$router.push('/signUp');
+     }
+    }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

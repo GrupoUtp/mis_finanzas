@@ -5,6 +5,8 @@ import Error from '@/views/Error404';
 import Ingresos from '@/views/Ingresos';
 import Egresos from '@/views/Egresos';
 import Consolidado from '@/views/Consolidado';
+import Login from '@/views/Login'
+import RegistroUser from '@/views/RegistroUser';
 
 Vue.use(Router)
 
@@ -12,8 +14,23 @@ export default new Router({
     mode: 'history',
     routes: [
         {
+            path: '/login',
+            name: 'Login',
+            component: Login
+        },
+        {
             path: '/',
-            name: 'InterfazUsu',
+            name: 'Login',
+            component: Login
+        },
+        {
+            path: '/signUp',
+            name: 'signUp',
+            component: RegistroUser
+        },
+        {
+            path: '/Home',
+            name: 'Home',
             component: InterfazUsu
         },
         {

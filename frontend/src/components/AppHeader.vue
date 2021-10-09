@@ -1,7 +1,7 @@
 <template>
     <div>
-        <section id="topbar" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
+      <section id="topbar" class="d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">       
         <i class="bi bi-phone d-flex align-items-center ms-4"><span>Aquí irá el nombre del usuario</span></i>
       </div>
@@ -18,7 +18,7 @@
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">Bienvenido a mis finanzas<span>.</span></a></h1>
+      <h1 class="logo"><a href="index.html">Bienvenido a myFinances<span>.</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="@/assets/img/logo.png" alt=""></a>-->
 

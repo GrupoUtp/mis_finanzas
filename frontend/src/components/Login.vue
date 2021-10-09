@@ -1,6 +1,6 @@
 <template>
   <div class="login-box">
-      <img src="../assets/logo_avatar2.jpg" class="avatar" alt="Avatar Image">
+      <img src="@/assets/logo_avatar2.jpg" class="avatar" alt="Avatar Image">
       <h1>Welcome back</h1>
       <form>
         <!-- USERNAME INPUT -->
@@ -11,7 +11,7 @@
         <input type="password" placeholder="Enter Password">
         <input type="submit" @click="irAHome()" value="Log In">
         <a href="">Forgot password?</a><br>
-        <a href="" @click="CreteAccount()">Don't have an account yet?</a>
+        <a href="" @click="CreateAccount()">Don't have an account yet?</a>
       </form>
     </div>
 </template>
@@ -26,15 +26,15 @@ export default {
     irAHome(){
       this.$router.push('/Home');
      },
-    CreteAccount(){
-      this.$router.push('/signUp');
+    CreateAccount(){
+      this.$router.push('/SignUp');
      }
     }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
   .login-box {
     width: 320px;
     height: 400px;

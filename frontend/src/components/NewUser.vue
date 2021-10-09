@@ -271,6 +271,7 @@ export default {
 </script>
 
 <style>
+
 .newUser-box {
     width: 320px;
     height: 730px;

@@ -18,17 +18,16 @@
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">Bienvenido a mis finanzas<span>.</span></a></h1>
+      <h1 class="logo"><a href="index.html">MI<span>$</span> FINANZA<span>$</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="@/assets/img/logo.png" alt=""></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="./">Home</a></li>
+          <li><a class="nav-link scrollto active" href="./home">Home</a></li>
           <li><a class="nav-link scrollto" href="./ingresos">Ingresos</a></li>
           <li><a class="nav-link scrollto" href="./egresos">Egresos</a></li>
           <li><a class="nav-link scrollto " href="./consolidado">Consolidado</a></li>
-          <li><a class="nav-link scrollto" href="#team">Metas</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>

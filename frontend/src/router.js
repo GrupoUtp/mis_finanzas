@@ -54,4 +54,8 @@ export default new Router({
             component: Consolidado
         }
     ],
+<<<<<<< HEAD
 });
+=======
+})
+>>>>>>> bec785443fde5d7e62d54c5025c7c3a379264973

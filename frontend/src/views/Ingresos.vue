@@ -1,18 +1,19 @@
 <template>
     <div>
         <app-header></app-header>
-        <div class="d-flex justify-content-center mt-5">
-            <h1>organizar interfaz para adicionar ingresos monetarios</h1>
-        </div>
+        <Ingresos></Ingresos>
         
     </div>
 </template>
 
 <script>
 import AppHeader from '@/components/AppHeader.vue';
+import Ingresos from '@/components/Entradas.vue';
+
 export default {
     components:{
-        AppHeader
+        AppHeader,
+        Ingresos
     }
 }
 </script>

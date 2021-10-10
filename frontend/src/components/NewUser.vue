@@ -261,8 +261,12 @@
           <input type="password" placeholder="Confirm your password">
           <input type="submit" value="Register">
         </form>
+<<<<<<< HEAD
     </div>
     </div>
+=======
+      </div>
+>>>>>>> bec785443fde5d7e62d54c5025c7c3a379264973
 </template>
 
 <script>
@@ -273,6 +277,7 @@ export default {
 </script>
 
 <style>
+<<<<<<< HEAD
 .registro {
   margin: 0;
   padding: 0;
@@ -281,6 +286,9 @@ export default {
   font-family: 'Ubuntu', sans-serif;
   height: 100vh;
 }
+=======
+
+>>>>>>> bec785443fde5d7e62d54c5025c7c3a379264973
 .newUser-box {
     width: 320px;
     height: 730px;

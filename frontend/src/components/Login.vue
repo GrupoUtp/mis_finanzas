@@ -31,15 +31,13 @@ export default {
           email:'',
           password:'',
           },
+      
       message:'',
       users:[]
     }
   },
   state:{
     token: null,
-  },
-  props: {
-    
   },
   methods:{
     irAHome(){
@@ -63,17 +61,19 @@ export default {
           //    console.log("Usuario si existe");
 
               if(this.form.password === value.password){
-
-          //      console.log("Contraseña correcta");
                 window.localStorage.setItem('AUTH', 'ok');
-                console.log(value.primer_nombre, value.primer_apellido);
                 this.$router.push({path: '/Home'});
+                return{
+                  props:[value.primer_nombre],
+                },
+              console.log(value.primer_nombre);
+                
               }else{
-                this.message= 'Contraseña incorrecta';
+                this.message= '* Contraseña incorrecta *';
               }
 
           }else if(value.email !== this.form.email){
-            this.message= 'Esta cuenta no ha sido registrada';
+            this.message= '* Esta cuenta no ha sido registrada *';
           }
          });
 
@@ -103,7 +103,7 @@ export default {
   .login-box {
     width: 320px;
     height: 500px;
-    background: rgba(0, 0, 0, 0.5 );
+    background: rgba(0, 0, 0, 0.952);
     color: #fff;
     top: 50%;
     left: 50%;

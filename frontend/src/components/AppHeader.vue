@@ -3,7 +3,7 @@
       <section id="topbar" class="d-flex align-items-center">
       <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">       
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>Aquí irá el nombre del usuario</span></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>{{primer_nombre}}</span></i>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -11,6 +11,7 @@
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
+      <b-button @click="cerrarSesion()" variant="danger">Cerrar Sesión</b-button>
     </div>
   </section>
 
@@ -54,3 +55,27 @@
   </header><!-- End Header -->
     </div>
 </template>
+
+<script>
+export default{
+  data(){
+    return{
+      primer_nombre: '',
+      primer_apellido: '',
+  }
+  },
+  beforeCreate(){
+    var auth = window.localStorage.getItem('AUTH');
+    console.log("AUTH start the BC -> " +auth);
+    if(auth !== 'ok'){
+      this.$router.push({path: '/Login'});
+    }
+  },
+  methods:{
+    cerrarSesion(){
+      window.localStorage.removeItem('AUTH');
+      this.$router.push({path: '/Login'})
+    }
+  }
+}
+</script>

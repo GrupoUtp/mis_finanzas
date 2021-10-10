@@ -18,7 +18,8 @@ export default {
     // HelloWorld
     // Mennu,
     // InterfazUsu
-  }
+  },
+  
 }
 </script>
 

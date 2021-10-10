@@ -3,17 +3,21 @@
     <div class="login-box">
       <img src="../assets/logo_avatar2.jpg" class="avatar" alt="Avatar Image">
       <h1>Welcome back</h1>
-      <form>
+      <form @submit.prevent="buscarUsuario()">
         <!-- USERNAME INPUT -->
         <label for="username">Username</label>
-        <input type="text" placeholder="Enter Username">
+        <input type="email" v-model="form.email" placeholder="Enter Username" required>
         <!-- PASSWORD INPUT -->
         <label for="password">Password</label>
-        <input type="password" placeholder="Enter Password">
-        <input type="submit" @click="irAHome()" value="Log In">
-        <a href="">Forgot password?</a><br>
-        <a href="" @click="CreteAccount()">Don't have an account yet?</a>
+        <input type="password" v-model="form.password" placeholder="Enter Password" required>
+        <input type="submit"  value="Log In">
+        <a href="">Forgot password?</a>
+        <a href="" @click="CreteAccount()">Don't have an account yet?</a><br><br>
+        <v-flex class="red--text" v-if="message">
+        {{message}}
+        </v-flex>
       </form>
+      
   </div>
   </div>
 </template>
@@ -21,6 +25,19 @@
 <script>
 export default {
   name: 'Login',
+  data(){
+    return{
+      form:{
+          email:'',
+          password:'',
+          },
+      message:'',
+      users:[]
+    }
+  },
+  state:{
+    token: null,
+  },
   props: {
     
   },
@@ -30,8 +47,46 @@ export default {
      },
     CreteAccount(){
       this.$router.push('/signUp');
+     },
+     buscarUsuario(){
+     //  console.log("Funciona");
+       
+       this.axios.get('usuario/list').then( res => {
+         
+     //    console.log(this.users);
+
+         this.users = res.data;
+         this.users.forEach((value,) => {
+
+          if(this.form.email === value.email){
+
+          //    console.log("Usuario si existe");
+
+              if(this.form.password === value.password){
+
+          //      console.log("Contraseña correcta");
+                window.localStorage.setItem('AUTH', 'ok');
+                console.log(value.primer_nombre, value.primer_apellido);
+                this.$router.push({path: '/Home'});
+              }else{
+                this.message= 'Contraseña incorrecta';
+              }
+
+          }else if(value.email !== this.form.email){
+            this.message= 'Esta cuenta no ha sido registrada';
+          }
+         });
+
+       });
      }
+    },
+    beforeCreate(){
+    var auth = window.localStorage.getItem('AUTH');
+    console.log("AUTH start the BC -> " +auth);
+    if(auth === 'ok'){
+      this.$router.push({path: '/Home'});
     }
+  },
   }
 </script>
 
@@ -47,7 +102,7 @@ export default {
 }
   .login-box {
     width: 320px;
-    height: 400px;
+    height: 500px;
     background: rgba(0, 0, 0, 0.5 );
     color: #fff;
     top: 50%;

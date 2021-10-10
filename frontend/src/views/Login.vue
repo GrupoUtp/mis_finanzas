@@ -1,6 +1,6 @@
 <template>
 
-    <div class="login">
+    <div >
       <Login></Login>
       <!-- <NewUser></NewUser> -->
       <router-view/>
@@ -24,12 +24,5 @@ export default {
 </script>
 
 <style>
-.login {
-  margin: 0;
-  padding: 0;
-  background: url(/assets/bg3.jpg) no-repeat center top;
-  background-size: cover;
-  font-family: 'Ubuntu', sans-serif;
-  height: 100vh;
-}
+
 </style>

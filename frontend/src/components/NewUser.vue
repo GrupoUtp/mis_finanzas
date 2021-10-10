@@ -1,5 +1,6 @@
 <template>
-    <div class="newUser-box">
+    <div class="registro">
+      <div class="newUser-box">
         <img src="../assets/bg3.jpg" class="avatar" alt="Avatar Image">
         <h1>Welcome to myFinances</h1>
         <form>
@@ -260,7 +261,8 @@
           <input type="password" placeholder="Confirm your password">
           <input type="submit" value="Register">
         </form>
-      </div>
+    </div>
+    </div>
 </template>
 
 <script>
@@ -271,6 +273,14 @@ export default {
 </script>
 
 <style>
+.registro {
+  margin: 0;
+  padding: 0;
+  background: url(/assets/bg3.jpg) no-repeat center top;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+  height: 100vh;
+}
 .newUser-box {
     width: 320px;
     height: 730px;

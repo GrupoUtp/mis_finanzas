@@ -1,5 +1,6 @@
 <template>
-  <div class="login-box">
+  <div class="login">
+    <div class="login-box">
       <img src="../assets/logo_avatar2.jpg" class="avatar" alt="Avatar Image">
       <h1>Welcome back</h1>
       <form>
@@ -13,7 +14,8 @@
         <a href="">Forgot password?</a><br>
         <a href="" @click="CreteAccount()">Don't have an account yet?</a>
       </form>
-    </div>
+  </div>
+  </div>
 </template>
 
 <script>
@@ -35,6 +37,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+.login {
+  margin: 0;
+  padding: 0;
+  background: url(/assets/bg3.jpg) no-repeat center top;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+  height: 100vh;
+}
   .login-box {
     width: 320px;
     height: 400px;

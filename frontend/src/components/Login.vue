@@ -2,18 +2,18 @@
   <div class="login">
     <div class="login-box">
       <img src="../assets/logo_avatar2.jpg" class="avatar" alt="Avatar Image">
-      <h1>Welcome back</h1>
+      <h1>Inicia Sesión</h1>
       <form @submit.prevent="buscarUsuario()">
         <!-- USERNAME INPUT -->
-        <label for="username">Username</label>
-        <input type="email" v-model="form.email" placeholder="Enter Username" required>
+        <label for="username">Correo electronico</label>
+        <input type="email" v-model="form.email" placeholder="Enter email" required>
         <!-- PASSWORD INPUT -->
-        <label for="password">Password</label>
+        <label for="password">Contraseña</label>
         <input type="password" v-model="form.password" placeholder="Enter Password" required>
         <input type="submit"  value="Log In">
-        <a href="">Forgot password?</a>
+        <a href="">Forgot password?</a><br>
         <a href="" @click="CreteAccount()">Don't have an account yet?</a><br><br>
-        <v-flex class="red--text" v-if="message">
+        <v-flex class="danger" v-if="message">
         {{message}}
         </v-flex>
       </form>
@@ -31,7 +31,6 @@ export default {
           email:'',
           password:'',
           },
-      
       message:'',
       users:[]
     }
@@ -59,15 +58,12 @@ export default {
           if(this.form.email === value.email){
 
           //    console.log("Usuario si existe");
-
               if(this.form.password === value.password){
+
                 window.localStorage.setItem('AUTH', 'ok');
                 this.$router.push({path: '/Home'});
-                return{
-                  props:[value.primer_nombre],
-                },
-              console.log(value.primer_nombre);
-                
+                console.log(value.primer_nombre, value.primer_apellido);
+
               }else{
                 this.message= '* Contraseña incorrecta *';
               }
@@ -140,7 +136,7 @@ export default {
     margin-bottom: 20px;
   }
   
-  .login-box input[type="text"], .login-box input[type="password"] {
+  .login-box input[type="text"], .login-box input[type="password"], .login-box input[type="email"] {
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;

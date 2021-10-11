@@ -284,7 +284,7 @@ export default {
 .newUser-box {
     width: 320px;
     height: 730px;
-    background: rgba(0, 0, 0, 0.5 );
+    background: rgba(0, 0, 0, 0.952);
     color: #fff;
     top: 50%;
     left: 50%;

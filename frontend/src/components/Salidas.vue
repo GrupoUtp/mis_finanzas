@@ -25,6 +25,10 @@
                 <label for="ValorGasto">Valor del gasto</label>
                 <input type="int" class="form-control" id="Gasto" placeholder="Ingrese el valor del egreso">
             </div>
+            <div>
+                <label for="example-datepicker">Escoge una fecha</label>
+                <b-form-datepicker id="example-datepicker" v-model="value" class="mb-2"></b-form-datepicker>
+            </div>
             <button type="submit" class="btn btn-primary" style="
                 margin: 10px 75px 0">
                Registrar egreso

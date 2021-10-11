@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="registro">
         <form class="newUser-box">
           <div>
             <b-avatar class="avatar" src="../assets/logo_avatar2.jpg" size="6rem"></b-avatar>
@@ -293,12 +293,20 @@ export default {
 
 <style>
 
+  .registro{
+  margin: 0;
+  padding: 0;
+  background: url(/assets/bg3.jpg) no-repeat center top;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+  height: 100vh;
+  }
   .newUser-box {
+    
     width: 300px;
     margin: auto;
-    margin-top: 35px;
     padding: 10px 10px 10px;
-    background: rgba(0, 0, 0, 0.5 );
+    background: rgba(0, 0, 0, 0.9 );
     color: #fff; 
   }
 

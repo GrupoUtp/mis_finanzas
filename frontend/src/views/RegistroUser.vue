@@ -1,7 +1,7 @@
 <template>
 
     <div>
-       <NewUser></NewUser>
+      <NewUser></NewUser>
       <router-view/>
     </div>
    

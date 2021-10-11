@@ -270,7 +270,7 @@
             <label for="password">Contraseña</label>
             <input type="password" class="form-control" id="Contraseña" placeholder="Crea una contraseña">
           </div>
-          <!-- PASSWORD 2 -->
+          <!-- PASSWORD 2 --> 
           <div class="form-group">
             <label for="password">Confirme su contraseña</label>
             <input type="password" class="form-control" id="ContraseñaConfirmada" placeholder="Confirme su contraseña">
@@ -278,7 +278,8 @@
           <!-- Botón -->
           <b-button class="button" type="submit" variant="danger">
                Registrarse
-          </b-button>
+          </b-button><br>
+          <a class="loginGo" href="/login">Inicia Sesión</a>
           
         </form>
     </div>
@@ -293,6 +294,12 @@ export default {
 
 <style>
 
+  .loginGo{
+    margin-top: 10px;
+    margin-left: 90px;
+    text-align: center;
+    color: #fff;
+  }
   .registro{
   margin: 0;
   padding: 0;
@@ -316,7 +323,7 @@ export default {
 
   .newUser-box h1 {
     margin: auto;
-    padding: 10px 0 10px;
+    padding: 0px 0 10px;
     text-align: center;
     font-size: 24px;
   }
@@ -343,7 +350,6 @@ export default {
     background: transparent;
     outline: none;
     height: 40px;
-    margin-bottom: 20px;
     color: rgb(199, 199, 199);
     font-size: 15px;
   }

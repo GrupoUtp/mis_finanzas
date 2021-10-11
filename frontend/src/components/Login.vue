@@ -13,8 +13,8 @@
         <input type="submit"  value="Log In">
         <a href="">Forgot password?</a><br>
         <a href="" @click="CreteAccount()">Don't have an account yet?</a><br><br>
-        <v-flex class="danger" v-if="message">
-        {{message}}
+        <v-flex class="red--text">
+          <div v-if="message">{{message}}</div>
         </v-flex>
       </form>
       
@@ -30,8 +30,9 @@ export default {
       form:{
           email:'',
           password:'',
-          },
-      message:'',
+          
+          }, 
+          message:'',
       users:[]
     }
   },
@@ -62,15 +63,12 @@ export default {
 
                 window.localStorage.setItem('AUTH', 'ok');
                 this.$router.push({path: '/Home'});
-                console.log(value.primer_nombre, value.primer_apellido);
-
-              }else{
-                this.message= '* Contraseña incorrecta *';
+                
+              }if(this.form.email !== value.email || this.form.password !== value.password){
+                this.message= '*Correo o Contraseña incorrecta *';
               }
-
-          }else{
-            this.message= '* Esta cuenta no ha sido registrada *';
           }
+        
          });
 
        });

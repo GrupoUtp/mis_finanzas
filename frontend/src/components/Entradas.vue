@@ -13,6 +13,10 @@
                 <label for="ValorIngreso">Valor del ingreso</label>
                 <input type="int" class="form-control" id="Ingreso" placeholder="Ingrese el valor del ingreso">
             </div>
+            <div>
+                <label for="example-datepicker">Escoge una fecha</label>
+                <b-form-datepicker id="example-datepicker" v-model="value" class="mb-2"></b-form-datepicker>
+            </div>
             <button type="submit" class="btn btn-primary" style="
                 margin: 10px 75px 0">
                Registrar ingreso

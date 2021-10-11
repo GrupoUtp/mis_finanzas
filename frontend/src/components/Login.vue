@@ -11,10 +11,10 @@
         <label for="password">Password</label>
         <input type="password" v-model="form.password" placeholder="Enter Password" required>
         <input type="submit"  value="Log In">
-        <a href="">Forgot password?</a>
+        <a href="">Forgot password?</a><br>
         <a href="" @click="CreteAccount()">Don't have an account yet?</a><br><br>
-        <v-flex class="red--text" v-if="message">
-        {{message}}
+        <v-flex class="red--text">
+          <div v-if="message">{{message}}</div>
         </v-flex>
       </form>
       
@@ -30,9 +30,9 @@ export default {
       form:{
           email:'',
           password:'',
-          },
-      
-      message:'',
+          
+          }, 
+          message:'',
       users:[]
     }
   },
@@ -63,18 +63,12 @@ export default {
               if(this.form.password === value.password){
                 window.localStorage.setItem('AUTH', 'ok');
                 this.$router.push({path: '/Home'});
-                return{
-                  props:[value.primer_nombre],
-                },
-              console.log(value.primer_nombre);
                 
-              }else{
-                this.message= '* Contraseña incorrecta *';
+              }if(this.form.email !== value.email || this.form.password !== value.password){
+                this.message= '*Correo o Contraseña incorrecta *';
               }
-
-          }else if(value.email !== this.form.email){
-            this.message= '* Esta cuenta no ha sido registrada *';
           }
+        
          });
 
        });

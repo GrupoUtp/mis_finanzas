@@ -64,9 +64,11 @@ export default {
                 window.localStorage.setItem('AUTH', 'ok');
                 this.$router.push({path: '/Home'});
                 
-              }if(this.form.email !== value.email || this.form.password !== value.password){
+              }else{
                 this.message= '*Correo o Contraseña incorrecta *';
               }
+          }else{
+            this.message= '*Correo o Contraseña incorrecta *';
           }
         
          });

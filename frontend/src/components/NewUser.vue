@@ -296,7 +296,7 @@ export default {
   .newUser-box {
     width: 300px;
     margin: auto;
-    margin-top: calc((100% - 870px) / 2);
+    margin-top: 35px;
     padding: 10px 10px 10px;
     background: rgba(0, 0, 0, 0.5 );
     color: #fff; 

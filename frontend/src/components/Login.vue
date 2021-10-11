@@ -39,9 +39,9 @@ export default {
     token: null,
   },
   methods:{
-    irAHome(){
+  /*  irAHome(){
       this.$router.push('/Home');
-     },
+     }, */
     CreteAccount(){
       this.$router.push('/signUp');
      },
@@ -68,7 +68,7 @@ export default {
                 this.message= '* Contraseña incorrecta *';
               }
 
-          }else if(value.email !== this.form.email){
+          }else{
             this.message= '* Esta cuenta no ha sido registrada *';
           }
          });

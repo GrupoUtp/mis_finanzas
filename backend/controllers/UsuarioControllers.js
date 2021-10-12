@@ -49,9 +49,9 @@ export default {
             let pas = req.body.password;
             const reg0 = await models.Usuario.findOne({_id:req.body});
             if(pas!=reg0.password){
-                req.body.password = await bcrypt.hash(req.body.password,10);
+                //req.body.password = await bcrypt.hash(req.body.password,10);
             } 
-            req.body.password = await bcrypt.hash(req.body.password,10);
+            // req.body.password = await bcrypt.hash(req.body.password,10);
             const reg = await models.Usuario.findByIdAndUpdate({_id:req.body._id},
                 {
                 primer_nombre:req.body.primer_nombre,

@@ -7,7 +7,7 @@ import router from './routes';
 
 //Conexión a la base de datos MongoDB
 mongoose.Promise=global.Promise;
-const dbUrl = 'mongodb://localhost:27017/mis_finanzas';
+const dbUrl = 'mongodb+srv://admin:1010@cluster0.1i4ph.mongodb.net/Cluster0?retryWrites=true&w=majority';
 mongoose.connect(dbUrl, {useUnifiedTopology : true,useNewUrlParser: true}).then(mongoose => console.log('Conectado a la BD en el puerto 27017')).catch(err => console.log(err));
 
 const app = express();

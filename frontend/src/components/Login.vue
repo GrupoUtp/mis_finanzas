@@ -22,8 +22,10 @@
   </div>
 </template>
 
+
 <script>
 export default {
+ 
   name: 'Login',
   data(){
     return{
@@ -31,10 +33,13 @@ export default {
           email:'',
           password:'',
           
-          }, 
+          },
+          nombre:'',
+          apellido:'',
           message:'',
       users:[]
     }
+    
   },
   state:{
     token: null,
@@ -62,7 +67,9 @@ export default {
 
               if(this.form.password === value.password){
                 window.localStorage.setItem('AUTH', 'ok');
-                console.log(value.primer_nombre)
+                this.nombre = value.nombre;
+                this.apellido = value.apellido;
+                //this.message = this.nombre+" "+this.apellido;
                 this.$router.push({path: '/Home'});
                 
               }else{

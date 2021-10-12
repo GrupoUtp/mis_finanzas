@@ -5,7 +5,7 @@ import token from "../services/token";
 export default {
     add: async (req,res,next) =>{
         try {
-            req.body.password = await bcrypt.hash(req.body.password,10);
+          //req.body.password = await bcrypt.hash(req.body.password,10);
             const reg = await models.Usuario.create(req.body);
             res.status(200).json(reg);
         } catch (e) {

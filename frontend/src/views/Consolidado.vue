@@ -1,19 +1,21 @@
 <template>
     <div>
         <app-header></app-header>
-        <div class="d-flex justify-content-center mt-5">
-        </div>
+        <TablaEgresos></TablaEgresos>
+        
         
     </div>
 </template>
 
 <script>
 import AppHeader from '@/components/AppHeader.vue';
+import TablaEgresos from '@/components/TablaEgresos.vue'
 
 
 export default {
     components:{
-        AppHeader
+        AppHeader,
+        TablaEgresos
         
     }
 }

@@ -22,8 +22,10 @@
   </div>
 </template>
 
+
 <script>
 export default {
+ 
   name: 'Login',
   data(){
     return{
@@ -31,10 +33,13 @@ export default {
           email:'',
           password:'',
           
-          }, 
+          },
+          nombre:'',
+          apellido:'',
           message:'',
       users:[]
     }
+    
   },
   state:{
     token: null,
@@ -62,6 +67,9 @@ export default {
               if(this.form.password === value.password){
 
                 window.localStorage.setItem('AUTH', 'ok');
+                this.nombre = value.nombre;
+                this.apellido = value.apellido;
+                //this.message = this.nombre+" "+this.apellido;
                 this.$router.push({path: '/Home'});
                 
               }else{
@@ -136,7 +144,7 @@ export default {
     margin-bottom: 20px;
   }
   
-  .login-box input[type="text"], .login-box input[type="password"], .login-box input[type="email"] {
+  .login-box input[type="text"], .login-box input[type="password"], .login-box input[type="email"]  {
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;

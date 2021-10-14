@@ -1,10 +1,10 @@
 import mongoose, { Schema} from "mongoose";
 
 const gastoSchema = new Schema({
-    nombreGasto: {type: String, maxlength:70, required:true},
-    descripcionGasto: {type:String, maxlength:255},
+    tipoGasto: {type: String, maxlength:70, required:true},
+   // descripcionGasto: {type:String, maxlength:255},
     estadoGasto: {type:Number,default:1},
-    totalGasto:  {type:Number,required:true},
+    valorGasto:  {type:Number,required:true},
     fechaGasto:  {type:Date, default:Date.now}
 });
 

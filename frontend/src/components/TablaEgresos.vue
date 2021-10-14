@@ -1,9 +1,15 @@
 <template>
     <div class="container">
+        <br>
+        
+        <form @submit.prevent="listarDatos()">
+            <b-button class="btn-success my-2" type="submit">Histórico de egresos</b-button>
+        </form>
+        
+
         <table class="table">
         <thead>
             <tr>
-            <th scope="col">No.</th>
             <th scope="col">Tipo de egreso</th>
             <th scope="col">Valor del egreso</th>
             <th scope="col">Fecha del gasto</th>
@@ -11,14 +17,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr vfor= "(item, index) in datosEgresos" :key="index">
-                <th scope="row">{{item._id}}</th>
-                <td>{{item.tipoGasto}}</td>
-                <td>{{item.totalGasto}}</td>
+            <tr v-for= "(item, index) in datosEgresos" :key="index">
+                <th scope="row">{{item.tipoGasto}}</th>
+                <td>{{item.valorGasto}}</td>
                 <td>{{item.fechaGasto}}</td>
                 <td>
-                    <b-button class="btn-danger mx-2" @click="eliminarNota(item._id)">Eliminar</b-button>
-                    <b-button class="btn-warning mx-2" @click="activarEdicion(item._id)">Editar</b-button>
+                    <b-button class="btn-danger mx-2" @click="eliminarDato(item._id)">Eliminar</b-button>
+                    <b-button class="btn-warning mx-2">Editar</b-button>
                 </td>
             </tr>
         </tbody>
@@ -45,7 +50,20 @@ export default {
             .catch(e => {
                 console.log(e.response)
             })
+        },
+        eliminarDato(id){
+
+            this.axios.delete(`gasto/remove/${id}`)
+            .then(res=>{
+                const index = this.datosEgresos.findIndex(item=> item._id===res.data._id);
+                this.datosEgresos.splice(index, 1);
+                console.log(this.item._id, res.data._id);
+            })
+            .catch(e=>{
+                  console.log(e.response);
+            })
         }
+        
     } 
 
 }

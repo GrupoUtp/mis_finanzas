@@ -18,7 +18,7 @@
                     <option value="Alimentación">Alimentación</option>
                     <option value="Salud">Salud</option>
                     <option value="Gastos Personales">Gastos Personales</option>
-                    <option value="OT">Otro</option>
+                    <option value="Otro">Otro</option>
                 </select>
             </div>
             <div class="form-group">
@@ -54,7 +54,6 @@ export default {
           console.log('entrada-boton');
             this.axios.post('/gasto/add',this.gasto)
             .then(res=>{
-
                 this.gastos.push(res.data)
                 this.gasto.tipoGasto="";
                 this.gasto.valorGasto="";

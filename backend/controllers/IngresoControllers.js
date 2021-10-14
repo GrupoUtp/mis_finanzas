@@ -32,7 +32,7 @@ export default {
     list: async (req,res,next) =>{
         try {
             let valor = req.query.valor;
-            const reg = await models.ingreso.find({fechaIngreso:0}).sort({'totalIngreso':-1});
+            const reg = await models.ingreso.find();
             res.status(200).json(reg);
         } catch (e) {
             res.status(500).send({

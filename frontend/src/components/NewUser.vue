@@ -1,26 +1,27 @@
 <template>
     <div class="registro">
-        <form class="newUser-box">
+        <form class="newUser-box" @submit.prevent="agregarUsuario()">
           <div>
             <b-avatar class="avatar" src="../assets/logo_avatar2.jpg" size="6rem"></b-avatar>
           </div>
           <h1>Bienvenido a myFinances</h1>
-        
+          {{mensaje.texto}} 
           <!-- NAME INPUT -->
           <div class="form-group">
             <label for="name">Nombre</label>
-            <input type="text" class="form-control" id="Nombre" placeholder="Escribe tu nombre">
+            <input type="text" class="form-control" id="Nombre" v-model="newUser.nombre" placeholder="Escribe tu nombre">
           </div>
           <!-- LAST NAME INPUT -->
           <div class="form-group">
             <label for="lastName">Apellido</label>
-            <input type="text" class="form-control" id="Apellido" placeholder="Escribe tu apellido">
+            <input type="text" class="form-control" id="Apellido" v-model="newUser.apellido" placeholder="Escribe tu apellido">
           </div>
           <!-- LISTA PAISES -->
           <div class="form-group">
             <label for="country">País</label>
-            <select class="form-control" id="country">
-              <option value="AF">Afganistán</option>
+            <select class="form-control" id="country" v-model="newUser.pais">
+
+              <option value="">Afganistán</option>
               <option value="AL">Albania</option>
               <option value="DE">Alemania</option>
               <option value="AD">Andorra</option>
@@ -258,17 +259,17 @@
           <!-- CIUDAD -->
           <div class="form-group">
             <label for="city">Ciudad</label>
-            <input type="text" class="form-control" id="Ciudad" placeholder="Escribe tu ciudad">
+            <input type="text" class="form-control" id="Ciudad" v-model="newUser.ciudad" placeholder="Escribe tu ciudad">
           </div>
           <!-- EMAIL -->
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" class="form-control" id="Email" placeholder="Escribe tu email">
+            <input type="text" class="form-control" id="Email" v-model="newUser.email" placeholder="Escribe tu email">
           </div>
           <!-- PASSWORD 1 -->
           <div class="form-group">
             <label for="password">Contraseña</label>
-            <input type="password" class="form-control" id="Contraseña" placeholder="Crea una contraseña">
+            <input type="password" class="form-control" id="Contraseña" v-model="newUser.password" placeholder="Crea una contraseña">
           </div>
           <!-- PASSWORD 2 --> 
           <div class="form-group">
@@ -287,8 +288,35 @@
 
 <script>
 export default {
-    name: 'NewUser'
-    
+    name: 'NewUser',
+    data(){
+      return{
+        newUsers:[],
+        mensaje: {color: 'success', texto: ''}, 
+        newUser:{nombre:"",apellido:"",pais:"",ciudad:"",email:"",password:""}
+      }
+    },
+    methods:{
+      agregarUsuario(){
+            this.axios.post('/usuario/add',this.newUser)
+            .then(res=>{
+
+                this.newUsers.push(res.data)
+                this.newUser.nombre="";
+                this.newUser.apellido="";
+                this.newUser.pais="";
+                this.newUser.ciudad="";
+                this.newUser.email="";
+                this.newUser.password="";
+                this.mensaje.color="success";
+                this.mensaje.texto="Usuario registrado correctamente";
+                this.showAlert();
+            })
+            .catch(e=>{
+                console.log(e.response);
+            });
+        }
+    }
 }
 </script>
 

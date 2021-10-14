@@ -26,7 +26,7 @@
 <script>
 export default {
  
-  name: 'Login',
+  name: '',
   data(){
     return{
       form:{
@@ -183,3 +183,5 @@ export default {
 
   
 </style>
+
+

@@ -6,10 +6,10 @@
         <i class="bi bi-person-circle d-flex align-items-center ms-4"><span>{{this.nombreUsuario}}&nbsp;{{this.nombreApellido}}</span></i>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="twitter">  <i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"> <i class="bi bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="linkedin"> <i class="bi bi-linkedin"></i></a>
       </div>
       <b-button @click="cerrarSesion()" variant="danger">Cerrar Sesión &nbsp;&nbsp; <i class="bi bi-box-arrow-right"></i></b-button>
     </div>

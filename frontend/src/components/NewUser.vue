@@ -20,8 +20,8 @@
           <div class="form-group">
             <label for="country">País</label>
             <select class="form-control" id="country" v-model="newUser.pais">
-
-              <option value="">Afganistán</option>
+              <option selected>Selecciona un país</option>
+              <option value="AF">Afganistán</option>
               <option value="AL">Albania</option>
               <option value="DE">Alemania</option>
               <option value="AD">Andorra</option>

@@ -21,7 +21,6 @@
                 <td>{{item.fechaIngreso}}</td>
                 <td>
                     <b-button class="btn-danger mx-2" @click="eliminarDato(item._id)">Eliminar</b-button>
-                    <b-button class="btn-warning mx-2">Editar</b-button>
                 </td>
             </tr>
         </tbody>

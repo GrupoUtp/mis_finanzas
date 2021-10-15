@@ -21,6 +21,7 @@
                 margin: 10px 75px 0">
                Registrar ingreso
             </button>
+            {{mensaje.texto}}
         </form>
     </div>
 </template>

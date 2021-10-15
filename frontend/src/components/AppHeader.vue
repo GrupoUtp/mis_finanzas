@@ -3,7 +3,7 @@
       <section id="topbar" class="d-flex align-items-center">
       <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">       
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>Nombre usuario</span></i>
+        <i class="bi bi-person-circle d-flex align-items-center ms-4"><span>{{this.nombreUsuario}}&nbsp;{{this.nombreApellido}}</span></i>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -11,7 +11,7 @@
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
-      <b-button @click="cerrarSesion()" variant="danger">Cerrar Sesión</b-button>
+      <b-button @click="cerrarSesion()" variant="danger">Cerrar Sesión &nbsp;&nbsp; <i class="bi bi-box-arrow-right"></i></b-button>
     </div>
   </section>
 
@@ -64,12 +64,21 @@
 <script>
 
 export default{
+  data(){
+    return{
+    }
+  },
   components:{
   },
  
 
   beforeCreate(){
     var auth = window.localStorage.getItem('AUTH');
+    var dataName = window.localStorage.getItem('NOMBRE');
+    var dataLastName = window.localStorage.getItem('APELLIDO');
+    this.nombreUsuario = dataName;
+    this.nombreApellido = dataLastName;
+
      if(this.$route.name == "Home"){
       this.clase="nav-link scrollto active"
       this.clase1="nav-link scrollto"
@@ -106,6 +115,8 @@ export default{
     },
     cerrarSesion(){
       window.localStorage.removeItem('AUTH');
+      window.localStorage.removeItem('NOMBRE');
+      window.localStorage.removeItem('APELLIDO');
       this.$router.push({path: '/Login'})
     },
   },

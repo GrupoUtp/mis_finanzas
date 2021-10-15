@@ -66,10 +66,9 @@ export default {
           //    console.log("Usuario si existe");
               if(this.form.password === value.password){
 
-                window.localStorage.setItem('AUTH', 'ok');
-                this.nombre = value.nombre;
-                this.apellido = value.apellido;
-                //this.message = this.nombre+" "+this.apellido;
+                window.localStorage.setItem('AUTH','ok');
+                window.localStorage.setItem('NOMBRE',value.nombre);
+                window.localStorage.setItem('APELLIDO', value.apellido);
                 this.$router.push({path: '/Home'});
                 
               }else{

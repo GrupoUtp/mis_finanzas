@@ -44,23 +44,25 @@ export default {
             this.axios.get('ingreso/list')
             .then(res=>{
                 this.datosIngresos= res.data;
+                console.log(this.item._id)
             })
             .catch(e => {
                 console.log(e.response)
             })
         },
         eliminarDato(id){
-
-            this.axios.delete(`gasto/remove/${id}`)
+            this.axios.delete(`/ingreso/remove/?_id=${id}`)
             .then(res=>{
                 const index = this.datosIngresos.findIndex(item=> item._id===res.data._id);
                 this.datosIngresos.splice(index, 1);
-                console.log(this.item._id, res.data._id);
+                this.mensaje.color="success";
+                this.mensaje.texto="Ingreso Eliminada";
+                this.showAlert();
             })
             .catch(e=>{
                   console.log(e.response);
             })
-        }
+        },
         
     } 
 

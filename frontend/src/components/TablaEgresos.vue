@@ -52,17 +52,19 @@ export default {
             })
         },
         eliminarDato(id){
-
-            this.axios.delete(`gasto/remove/${id}`)
+            this.axios.delete(`/gasto/remove/?_id=${id}`)
             .then(res=>{
+
                 const index = this.datosEgresos.findIndex(item=> item._id===res.data._id);
                 this.datosEgresos.splice(index, 1);
-                console.log(this.item._id, res.data._id);
+                this.mensaje.color="success";
+                this.mensaje.texto="Egreso Eliminada";
+                this.showAlert();
             })
             .catch(e=>{
                   console.log(e.response);
             })
-        }
+        },
         
     } 
 

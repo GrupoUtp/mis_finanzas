@@ -25,10 +25,10 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="./home">Home</a></li>
-          <li><a class="nav-link scrollto" href="./ingresos">Ingresos</a></li>
-          <li><a class="nav-link scrollto" href="./egresos">Egresos</a></li>
-          <li><a class="nav-link scrollto " href="./consolidado">Consolidado</a></li>
+          <li><a :class="this.clase"  href="./home">Home</a></li>
+          <li><a :class="this.clase1" href="./ingresos">Ingresos</a></li>
+          <li><a :class="this.clase2" href="./egresos">Egresos</a></li>
+          <li><a :class="this.clase3" href="./consolidado">Consolidado</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -48,8 +48,10 @@
           </li> -->
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+        <span class="btn_menu">
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </span>
+        </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
@@ -57,25 +59,56 @@
 </template>
 
 <script>
-export default{
 
-  data(){
-    return{
-      
-  }
+</script>
+<script>
+
+export default{
+  components:{
   },
+ 
+
   beforeCreate(){
     var auth = window.localStorage.getItem('AUTH');
-    console.log("AUTH start the BC -> " +auth);
+     if(this.$route.name == "Home"){
+      this.clase="nav-link scrollto active"
+      this.clase1="nav-link scrollto"
+      this.clase2="nav-link scrollto"
+      this.clase3="nav-link scrollto"
+    }
+    if(this.$route.name == "Ingresos"){
+      this.clase="nav-link scrollto"
+      this.clase1="nav-link scrollto active"
+      this.clase2="nav-link scrollto"
+      this.clase3="nav-link scrollto"
+    }
+    if(this.$route.name == "Egresos"){
+      this.clase="nav-link scrollto"
+      this.clase1="nav-link scrollto"
+      this.clase2="nav-link scrollto active"
+      this.clase3="nav-link scrollto"
+    }
+    if(this.$route.name == "Consolidado"){
+      this.clase="nav-link scrollto"
+      this.clase1="nav-link scrollto"
+      this.clase2="nav-link scrollto"
+      this.clase3="nav-link scrollto active"
+    }
     if(auth !== 'ok'){
       this.$router.push({path: '/Login'});
     }
+    
   },
+
   methods:{
+    return:{
+      
+    },
     cerrarSesion(){
       window.localStorage.removeItem('AUTH');
       this.$router.push({path: '/Login'})
-    }
-  }
+    },
+  },
+  
 }
 </script>

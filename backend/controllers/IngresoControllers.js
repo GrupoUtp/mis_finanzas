@@ -58,7 +58,7 @@ export default {
     },
     remove: async (req,res,next) =>{
         try {
-            const reg = await models.ingreso.findByIdAndDelete({_id:req.body._id});
+            const reg = await models.ingreso.findOneAndRemove({_id:req.query._id});
             res.status(200).json(reg);
         } catch (e) {
             res.status(500).send({
